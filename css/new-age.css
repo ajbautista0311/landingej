@@ -21,10 +21,20 @@
   src: url(../webfonts/gibson-bold.ttf);
 }
 
-* {
-  font-family: 'Fugaz One', 'Poppins';
+@font-face {
+  font-family: Poppins Bold;
+  src: url(../webfonts/poppins-bold.otf);
 }
 
+@font-face {
+  font-family: Poppins Light;
+  src: url(../webfonts/poppins-light.otf);
+}
+
+
+b{
+  font-family:'Poppins Bold';
+}
 
 html,
 body {
@@ -33,7 +43,7 @@ body {
 }
 
 body {
-  font-family: 'Muli', 'Helvetica', 'Arial', 'Poppins', 'sans-serif';
+  font-family: 'Poppins', 'Muli', 'Helvetica', 'Arial', 'sans-serif';
   
 
 }
@@ -65,14 +75,38 @@ h4,
 h5,
 h6 {
   /*font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';*/
-  font-weight: 200;
-  letter-spacing: 1px;
+/*   font-weight: 200;
+  letter-spacing: 1px; */
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+tw{
+  color: white;
+}
+
+tb{
+  color: black;
+}
+
+.text-color-white{
+  color: white !important;
+}
+
+.text-color-black{
+  color: black !important;
+}
+
+.text-color-orange{
+  color: #FF7139 !important;
+}
+
+.text-color-gray{
+  color: #514D47 !important;
 }
 
 section {
@@ -180,14 +214,10 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2)
-  ),url(../img/bk4.jpg);
-  background-size: cover;
+  background-image:url(../img/bg-alacarga-header.jpg);
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
-  background-attachment: fixed;
 }
 
 @media only screen and (max-width: 767px) {
@@ -227,8 +257,7 @@ header.masthead .device-container .screen img {
 
 @media (min-width: 992px) {
   header.masthead {
-    height: 100vh;
-    min-height: 775px;
+    min-height: 500px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -247,6 +276,12 @@ header.masthead .device-container .screen img {
 section.download {
   position: relative;
   padding: 30px 0;
+}
+
+section.download .download-heading{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'poppins Bold';
 }
 
 section.download h2 {
@@ -276,7 +311,7 @@ section.download .badges .badge-link img {
 
 @media (min-width: 768px) {
   section.download h2 {
-    font-size: 70px;
+    font-size: 40px;
   }
 }
 
@@ -318,13 +353,15 @@ section.features .feature-item h3 {
   font-size: 30px;
 }
 
+section.features .feature-item p {
+  font-size: 14px;
+}
+
 section.features .feature-item i {
   font-size: 80px;
   display: block;
   margin-bottom: 15px;
-  background: white;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 
 section.cta {
