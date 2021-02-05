@@ -133,6 +133,10 @@ section h2 {
   letter-spacing: 1px;
 }
 
+#mainNav .navbar-brand > img{
+  filter: invert(0.4) sepia(1) saturate(20) hue-rotate(327.6deg) brightness(1);
+}
+
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
   color: #FF7139;
 }
@@ -179,6 +183,11 @@ section h2 {
     color: white;
 
   }
+
+  #mainNav .navbar-brand > img{
+    filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1.2);
+  }
+
   #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
     color: white;
   }
@@ -197,42 +206,61 @@ section h2 {
   #mainNav.navbar-shrink .navbar-brand {
     color: #222222;
   }
+  #mainNav.navbar-shrink .navbar-brand > img{
+    filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.2);
+  }
+}
+
   #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
     color: #FF7139;
   }
+
+  #mainNav.navbar-shrink .navbar-brand:hover > img, #mainNav.navbar-shrink .navbar-brand:focus > img {
+    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(327.6deg) brightness(1);
+  }
+
   #mainNav.navbar-shrink .navbar-nav > li > a,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus {
     color: #222222;
   }
+
+  #mainNav.navbar-shrink .navbar-nav > li > a > img {
+    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(327.6deg) brightness(1);
+  }
+  
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
     color: #FF7139;
   }
-}
 
 header.masthead {
   position: relative;
-  width: 100%;
   color: white;
-/*   background-image:url(../img/bg-alacarga-header.jpg);
-  background-size: 100%;
+  background-image:url('../img/bg-alacarga-header.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center; */
+  background-position: center right;
 }
 
 @media only screen and (max-width: 767px) {
-  header.masthead {
+/*   header.masthead {
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),url(../img/bk2movil.png);
-  }
+  } */
   .logoh{
     width: 100vw;
   }
   #mainNav .navbar-brand {
     color: #FF7139;
   }
+
+  #mainNav .navbar-brand > img
+  {    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(327.6deg) brightness(1);}
+
+  #mainNav .navbar-brand .navbar-shrink> img
+  {    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(327.6deg) brightness(1);}
 }
 
 header.masthead .header-content {
@@ -306,6 +334,7 @@ section.download .badges .badge-link img {
     display: inline-block;
     margin-bottom: 0;
   }
+
 }
 
 @media (min-width: 768px) {
